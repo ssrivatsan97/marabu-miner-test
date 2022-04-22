@@ -12,3 +12,8 @@
 `cmake ..`  
 `make`  
 
+- Edit the number of blocks and the previd and txids of blocks in the file hash-rate.cpp
+
+- Compile again by running `make`
+
+- Run `./HashRate`
