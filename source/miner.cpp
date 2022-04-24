@@ -26,8 +26,8 @@ int main(int args, char** argv) {
 		return -2;
 	}
 
-	std::string prefix = block.substr(0, noncePos + 9);
-	std::string postfix = block.substr(noncePos + 64 + 9, block.size());
+	std::string prefix = block.substr(0, noncePos + 10);
+	std::string postfix = block.substr(noncePos + 64 + 10, block.size());
 
 	std::string finalBlock;
 	std::string blockHash;
