@@ -18,9 +18,13 @@ file(GLOB CryptoPPSource
 )
 
 add_library(CryptoPP ${CryptoPPSource})
-add_library(Hashes source/hash.cpp source/hex.cpp)
+add_library(Hashes source/hash.cpp)
 
 add_executable(HashRate source/hash-rate.cpp)
 target_link_libraries(HashRate Hashes)
 target_link_libraries(HashRate CryptoPP)
+
+add_executable(MinerStandalone source/miner.cpp)
+target_link_libraries(MinerStandalone Hashes)
+target_link_libraries(MinerStandalone CryptoPP)
 
