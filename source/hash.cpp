@@ -6,10 +6,10 @@
 namespace hashing {
 
 std::string SHA256(const std::string& in) {
-    CryptoPP::SHA256 hash;
+	CryptoPP::SHA256 hash;
 	std::string digest(CryptoPP::SHA256::DIGESTSIZE, '0');
-    hash.CalculateDigest((CryptoPP::byte*) digest.data(), (CryptoPP::byte*) in.c_str(), in.size());
-	return std::move(digest);;
+	hash.CalculateDigest((CryptoPP::byte*) digest.data(), (CryptoPP::byte*) in.c_str(), in.size());
+	return digest;
 }
 
 std::string decodeHex(const std::string& hex) {
